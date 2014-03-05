@@ -57,3 +57,29 @@ La idea es trabajar en una máquina virtual creada con Vagrant, y dentro de ést
 
         $ vagrant reload && vagrant ssh
         (guest) $ bash /vagrant/install-docker-latest.sh
+
+8. Crea un contenedor a partir de un Dockerfile
+
+        (guest) $ sudo docker build -t example - < /vagrant/Dockerfile
+
+9. Corre un comando en el contenedor
+
+        (guest) $ sudo docker run -p 5555:5555 example
+
+10. Prueba la conexión con un cliente externo
+
+        $ coffee client-example/client.coffee
+
+    Deberías ver una salida como:
+
+>     Connecting to server...
+>     Sending request 1...
+>     Sending request 2...
+>     Sending request 3...
+>     Sending request 4...
+>     Sending request 5...
+>     Received reply 1: World
+>     Received reply 2: World
+>     Received reply 3: World
+>     Received reply 4: World
+>     Received reply 5: World
