@@ -64,10 +64,17 @@ La idea es trabajar en una máquina virtual creada con Vagrant, y dentro de ést
 
 9. Corre un comando en el contenedor
 
-        (guest) $ sudo docker run -p 5555:5555 example
+    Back-end C:
+
+        (guest) $ sudo docker run -p 5555:5555 /server/server
+
+    Back-end Python:
+
+        (guest) $ sudo docker run -p 5555:5555 python /server/server.py
 
 10. Prueba la conexión con un cliente externo
 
+        $ sudo npm install zmq
         $ coffee client-example/client.coffee
 
     Deberías ver una salida como:
