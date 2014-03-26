@@ -30,6 +30,8 @@ Además, rosquillas.
 
 3. Arranca la máquina virtual
 
+    **Este paso puede tardar varios minutos**. Es buena idea que vayas a tomar un café o que juegues una partida de 2048
+
         $ vagrant up
 
 4. Conéctate a la máquina virtual vía ssh
