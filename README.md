@@ -49,8 +49,9 @@ Además, rosquillas.
         (guest) $ coffee server-example/server.coffee \
         reactivegrid_ks 127.0.0.1 127.0.0.2 127.0.0.3
 
-7. Prueba la conexión con un cliente externo
+7. Prueba la conexión con un cliente externo. Requiere [ØMQ](http://zeromq.org)
 
+        $ brew install zeromq
         $ sudo npm install zmq async
         $ coffee client-example/client.coffee
 
